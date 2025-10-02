@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travel App</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <style>
+    /* --- Added styles for Gulugod image --- */
+    .about-image2 {
+      width: 100%;
+      max-width: 500px;   
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    /* Buttons */
+    .btn,
+    .destinations-item button {
+      background-color: #384c70;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 20px;
+    }
+
+    .btn:hover,
+    .destinations-item button:hover {
+      background-color: #2d3d5c;
+      border-radius: 20px;
+    }
+
+    /* Contact section */
+    .contact {
+      background: #f4f7fa;
+      padding: 60px 20px;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .contact-title {
+      font-size: 32px;
+      font-weight: bold;
+      color: #384c70; /* fixed color */
+      margin-bottom: 20px;
+    }
+
+    .actions {
+      margin: 10px 0;
+    }
+
+    .actions span, 
+    .actions a {
+      font-size: 18px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .actions a:hover {
+      color: #384c70;
+    }
+
+    /* Footer */
+    .footer {
+      background: #384c70;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .footer a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Carousel styles */
+    .carousel {
+      position: relative;
+      max-width: 1000px;
+      margin: 60px auto;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .carousel-slide {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-item {
+      min-width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .carousel-item img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+    }
+
+    .carousel iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0,0,0,0.5);
+      color: #fff;
+      border: none;
+      padding: 12px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    .carousel-btn:hover {
+      background-color: rgba(0,0,0,0.7);
+    }
+
+    .prev {
+      left: 20px;
+    }
+
+    .next {
+      right: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <span>Mabini.</span>
+      <div class="nav-links">
+        <a href="#">Documentary</a>
+        <a href="#">Gallery</a>
+        <a href="#">Stories</a>
+        <a href="#">Contact Us</a>
+      </div>
+    </div>
+    <img src="./images/ZuBlu.webp" class="background"/>
+    <div class="over"></div>
+    <div class="header-text">
+      <h1>
+        Unforgettable travel <br />
+        experience in <br />
+        Mabini, Batangas
+      </h1>
+    </div>
+    <img src="./images/mouse.png" class="scroll-icon"/>
+  </div>
+
+  <div class="about">
+    <div class="flex">
+      <div class="column">
+        <span class="small">ABOUT US</span>
+        <span>Why Choose Mabini ?</span>
+        <p>
+          it’s a destination where adventure and relaxation come together. From
+          world-class diving and snorkeling in its vibrant reefs, to peaceful beaches
+          perfect for unwinding, Mabini offers breathtaking ocean views, warm hospitality,
+          and unforgettable experiences that will keep you coming back for more.
+        </p>
+        <button class="btn">Discover More</button>
+      </div>
+      <div class="about-images">
+        <img src="./images/aboutImage1.jpg" alt="aboutImage1" class="about-image1"/>
+        <img src="./images/gulugod.jpg" alt="Mt. Gulugod Baboy, Mabini Batangas" class="about-image2"/>
+      </div>
+    </div>
+  </div>
+
+  <div class="destinations">
+    <section>
+    <div class="destinations-list">
+      <div class="header-text">
+        <span>TRAVEL DESTINATIONS</span>
+        <h1>
+          Find Travel <br />
+          destinations you <br />
+          Love
+        </h1>
+      </div>
+      <div class="destinations-images">
+        <div class="destinations-item">
+          <div class="destinations-item-overlay">
+            <img src="./images/netanya.jpg" alt="Netanya"/>
+            <span class="destination-title">CAMP NETANYA</span>
+            <div class="cover"></div>
+          </div>
+          <span>
+          Often called the “Little Santorini of Batangas” because of its Greek-inspired architecture. 
+          <button>Discover more</button>
+        </div>
+        <div class="destinations-item bottom">
+          <div class="destinations-item-overlay">
+            <img src="./images/Anilao.jpg" alt="Anilao"/>
+            <span class="destination-title">ANILAO</span>
+            <div class="cover"></div>
+          </div>
+          <span>
+            Anilao beaches in Mabini, Batangas are famous for rich marine life, and great diving spots.
+          </span>
+          <button>Discover more</button>
+        </div>
+        <div class="destinations-item">
+          <div class="destinations-item-overlay">
+            <img src="./images/Diving Spots.jpg" alt="Diving Spots"/>
+            <span class="destination-title">DIVING SPOTS</span>
+            <div class="cover"></div>
+          </div>
+          <span>
+            Mabini, Batangas offers top diving spots with colorful reefs and diverse marine life.
+          </span>
+          <button>Discover more</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Carousel with Google Map -->
+  <div class="carousel">
+    <div class="carousel-slide">
+      <div class="carousel-item">
+        <img src="./images/netanya1.jpg" alt="Camp Netanya"/>
+      </div>
+      <div class="carousel-item">
+        <img src="./images/mabini.jpg" alt="Anilao"/>
+      </div>
+      <div class="carousel-item">
+        <img src="./images/awari.jpg" alt="Diving"/>
+      </div>
+      <div class="carousel-item">
+        <!-- Google Map -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.6735872378696!2d120.9132314749233!3d13.737679197056099!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd0f92cd7e4577%3A0x8e5b74b6e8e6a19f!2sMabini%2C%20Batangas!5e0!3m2!1sen!2sph!4v1694799999999" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+    <button class="carousel-btn prev">&#10094;</button>
+    <button class="carousel-btn next">&#10095;</button>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="contact">
+    <div class="contact-title">📞 Contact Us</div>
+    <div class="actions">
+      <a href="tel:+1833444444">+1 (833) 444 444</a>
+    </div>
+    <div class="actions">
+      <a href="mailto:contact@travelmabini.com">contact@travelmabini.com</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Mabini.</span>
+    <div class="footer-flex">
+      <a href="#">Terms and Conditions</a>
+      <a href="#">Services</a>
+      <a href="#">Gallery</a>
+      <a href="#">Destinations</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+
+  <script>
+    // Carousel JavaScript
+    const slide = document.querySelector('.carousel-slide');
+    const items = document.querySelectorAll('.carousel-item');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    let index = 0;
+
+    function showSlide(i) {
+      if (i >= items.length) index = 0;
+      if (i < 0) index = items.length - 1;
+      slide.style.transform = `translateX(${-index * 100}%)`;
+    }
+
+    nextBtn.addEventListener('click', () => {
+      index++;
+      showSlide(index);
+    });
+
+    prevBtn.addEventListener('click', () => {
+      index--;
+      showSlide(index);
+    });
+
+    // Auto-slide every 5s
+    setInterval(() => {
+      index++;
+      showSlide(index);
+    }, 5000);
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+  <script src="./scripts.js"></script>
+</body>
+</html>
