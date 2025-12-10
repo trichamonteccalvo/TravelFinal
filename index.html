@@ -179,7 +179,7 @@
         <button class="btn">Discover More</button>
       </div>
       <div class="about-images">
-        <img src="./images/aboutimage1.jpg" alt="aboutimage1" class="about-image1"/>
+        <img src="./images/aboutImage1.jpg" alt="aboutImage1" class="about-image1"/>
         <img src="./images/gulugod.jpg" alt="Mt. Gulugod Baboy, Mabini Batangas" class="about-image2"/>
       </div>
     </div>
@@ -209,7 +209,7 @@
         </div>
         <div class="destinations-item bottom">
           <div class="destinations-item-overlay">
-            <img src="./images/anilao.jpg" alt="Anilao"/>
+            <img src="./images/Anilao.jpg" alt="Anilao"/>
             <span class="destination-title">ANILAO</span>
             <div class="cover"></div>
           </div>
@@ -305,6 +305,31 @@
       index++;
       showSlide(index);
     }, 5000);
+
+    // Navigation Links
+    document.querySelectorAll('.nav-links a').forEach((link, i) => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const sections = ['about', 'destinations', 'carousel', 'contact'];
+        if (i < sections.length) {
+          document.querySelector('.' + sections[i])?.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Discover More Button in About Section
+    document.querySelector('.about .btn').addEventListener('click', () => {
+      document.querySelector('.destinations')?.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Discover More Buttons in Destinations
+    document.querySelectorAll('.destinations-item button').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const title = btn.parentElement.querySelector('.destination-title')?.textContent || 'Destination';
+        alert('Explore ' + title + '!\n\nNavigating to ' + title + ' details...');
+        // You can replace this with actual navigation or modal functionality
+      });
+    });
   </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
